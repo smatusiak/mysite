@@ -24,6 +24,9 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
+TEMPLATE_DIRS = (
+    '/home/smatusiak/mysite/templates',
+)
 ALLOWED_HOSTS = []
 
 
