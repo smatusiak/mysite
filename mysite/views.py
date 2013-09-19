@@ -16,3 +16,8 @@ def hours_ahead(request, offset):
         raise Http404()
     dt = datetime.datetime.now() + datetime.timedelta(hours=offset)
     return render(request, 'hours_ahead.html', {'hour_offset': offset, 'next_time': dt})
+
+def user_info(request):
+    values = request.META.items()
+    values.sort()
+    return render(request, 'meta_values.html', {'values': values, 'path': request.path})

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %} Your info {% endblock %}
+
+{% block content %}
+<h1>{{ path }}</h1>
+<ul>
+
+{% for header,value in values %}
+    <li><em>{{ header }}</em>: {{ value }}</li>
+{% endfor %}
+
+</ul>
+
+{% endblock %}
